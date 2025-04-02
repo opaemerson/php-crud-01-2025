@@ -17,6 +17,7 @@ $list = $service->listUsers();
 <body>
     <h2>Lista de Usuários</h2>
     <button onclick="window.location.href='../index.php'">Voltar ao inicio</button>
+    <button>Criar usuário</button>
     <br><br>
     <table>
         <thead>

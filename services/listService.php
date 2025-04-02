@@ -2,13 +2,13 @@
 require_once __DIR__ . '/../config.php';
 require_once __DIR__ . '/../repository/userRepository.php';
 require_once __DIR__ . '/../repository/colorRepository.php';
-require_once __DIR__ . '/../repository/listRepository.php';
+require_once __DIR__ . '/../repository/registerRepository.php';
 
 class ListService 
 {
     protected $repositoryUser;
     protected $repositoryColor;
-    protected $repositoryList;
+    protected $repositoryRegister;
     protected $conn;
 
     public function __construct() {
@@ -17,12 +17,12 @@ class ListService
         
         $this->repositoryUser = new User();
         $this->repositoryColor = new Color();
-        $this->repositoryList = new ListRepository();
+        $this->repositoryRegister = new RegisterRepository();
     }
 
     public function listAll()
     {
-        return $this->repositoryList->searchList($this->conn);
+        return $this->repositoryRegister->searchList($this->conn);
     }
 
     public function listUsers()

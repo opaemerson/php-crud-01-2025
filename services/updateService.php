@@ -2,7 +2,8 @@
 require_once __DIR__ . '/../config.php';
 require_once __DIR__ . '/../repository/registerRepository.php';
 
-class InsertService 
+
+class UpdateService 
 {
     protected $repositoryRegister;
     protected $conn;
@@ -14,9 +15,10 @@ class InsertService
         $this->repositoryRegister = new RegisterRepository();
     }
 
-    public function insertRegister($params)
+    public function updateRegister($params)
     {
-        return $this->repositoryRegister->insertRegister($this->conn, $params);
+        return $this->repositoryRegister->updateRegister($this->conn, $params);
     }
-} 
+}
+
 ?>

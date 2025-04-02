@@ -12,8 +12,10 @@ $list = $service->listAll();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem</title>
-    <script src="js/index.js"></script>
+    <script src="js/register.js"></script>
+    <link rel="stylesheet" href="css/editRegister.css">
 </head>
+
 <body>
     <h2>Listagem</h2>
     <button onclick="window.location.href='guides/listUsers.php'">Lista de Usuários</button>
@@ -23,24 +25,32 @@ $list = $service->listAll();
     <table>
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Nome da Pessoa</th>
+                <th>Usuário</th>
                 <th>Cor</th>
                 <th>Editar</th>
                 <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($list as $user): ?>
+            <?php foreach ($list as $register): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($user['id']); ?></td>
-                    <td><?php echo htmlspecialchars($user['nome']); ?></td>
-                    <td><?php echo htmlspecialchars($user['cor']); ?></td>
-                    <td><button>Editar</button></td>
-                    <td><button>Excluir</button></td>
+                    <td><?php echo htmlspecialchars($register['usuario']); ?></td>
+                    <td><?php echo htmlspecialchars($register['cor']); ?></td>
+                    <td>
+                        <button onclick="openModal(
+                            <?php echo htmlspecialchars($register['id']); ?>, 
+                            '<?php echo htmlspecialchars($register['usuario_id']); ?>', 
+                            '<?php echo htmlspecialchars($register['cor_id']); ?>')">
+                            Editar
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="deleteRegister(<?php echo htmlspecialchars($register['id']); ?>)">Excluir</button>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 </body>
-</html>
+<?php include('modal/editRegister.php') ?>
+</html> 

@@ -24,17 +24,14 @@ $list = $service->listColors();
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Editar</th>
-                <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($list as $user): ?>
+            <?php foreach ($list as $color): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($user['id']); ?></td>
-                    <td><?php echo htmlspecialchars($user['nome']); ?></td>
-                    <td><?php echo htmlspecialchars($user['cor']); ?></td>
+                    <td><?php echo htmlspecialchars($color['id']); ?></td>
+                    <td><?php echo htmlspecialchars($color['nome']); ?></td>
                     <td><button>Editar</button></td>
-                    <td><button>Excluir</button></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
