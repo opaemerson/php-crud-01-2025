@@ -12,7 +12,8 @@ $list = $service->listColors();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem</title>
-    <script src="js/index.js"></script>
+    <script src="../js/color.js"></script>
+    <link rel="stylesheet" href="../css/universal.css">
 </head>
 <body>
     <h2>Lista de Cores</h2>
@@ -31,10 +32,17 @@ $list = $service->listColors();
                 <tr>
                     <td><?php echo htmlspecialchars($color['id']); ?></td>
                     <td><?php echo htmlspecialchars($color['nome']); ?></td>
-                    <td><button>Editar</button></td>
+                    <td>
+                        <button onclick="openModal(
+                            <?php echo htmlspecialchars($color['id']); ?>, 
+                            '<?php echo htmlspecialchars($color['nome']); ?>')">
+                            Editar
+                        </button></td>
+                    <td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 </body>
+<?php include('../modal/editColor.php') ?>
 </html>

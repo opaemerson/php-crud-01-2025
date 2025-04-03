@@ -13,7 +13,7 @@ $list = $service->listAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem</title>
     <script src="js/register.js"></script>
-    <link rel="stylesheet" href="css/editRegister.css">
+    <link rel="stylesheet" href="css/universal.css">
 </head>
 
 <body>

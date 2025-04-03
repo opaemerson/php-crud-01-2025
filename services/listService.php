@@ -15,8 +15,8 @@ class ListService
         $config = new Config();   
         $this->conn = $config->conn;
         
-        $this->repositoryUser = new User();
-        $this->repositoryColor = new Color();
+        $this->repositoryUser = new UserRepository();
+        $this->repositoryColor = new ColorRepository();
         $this->repositoryRegister = new RegisterRepository();
     }
 
