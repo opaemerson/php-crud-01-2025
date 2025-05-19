@@ -2,12 +2,12 @@ Bem-vindo ao projeto PHP-CRUD 01-2025!
 Este é um projeto simples e didático de CRUD (Create, Read, Update, Delete), desenvolvido com PHP puro e integrado ao MySQL 8, utilizando Docker para facilitar a execução em qualquer ambiente.
 
 Tecnologias Utilizadas
-- PHP (sem frameworks)
+- PHP 8.1 (sem frameworks)
 - MySQL 8
 - Docker e Docker Compose
 - phpMyAdmin
 
-Como Executar o Projeto
+### Como Executar o Projeto
 Siga os passos abaixo para rodar o projeto corretamente na sua máquina:
 
 ### 1. Pré-requisitos
