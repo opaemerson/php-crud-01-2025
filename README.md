@@ -7,8 +7,7 @@ Tecnologias Utilizadas
 - Docker e Docker Compose
 - phpMyAdmin
 
-### Como Executar o Projeto
-Siga os passos abaixo para rodar o projeto corretamente na sua máquina:
+# Siga os passos abaixo para rodar o projeto corretamente na sua máquina:
 
 ### 1. Pré-requisitos
 
