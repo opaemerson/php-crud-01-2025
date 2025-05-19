@@ -30,21 +30,23 @@ $list = $service->listUsers();
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($list as $user): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($user['id']); ?></td>
-                    <td><?php echo htmlspecialchars($user['nome']); ?></td>
-                    <td>
-                        <button onclick="openModal(
-                            <?php echo htmlspecialchars($user['id']); ?>, 
-                            '<?php echo htmlspecialchars($user['nome']); ?>')">
-                            Editar
-                        </button></td>
-                    <td>
-                        <button onclick="deleteUser(<?php echo htmlspecialchars($user['id']); ?>)">Excluir</button>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
+            <?php if (!empty($list)){ ?>
+                <?php foreach ($list as $user): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($user['id']); ?></td>
+                        <td><?php echo htmlspecialchars($user['nome']); ?></td>
+                        <td>
+                            <button onclick="openModal(
+                                <?php echo htmlspecialchars($user['id']); ?>, 
+                                '<?php echo htmlspecialchars($user['nome']); ?>')">
+                                Editar
+                            </button></td>
+                        <td>
+                            <button onclick="deleteUser(<?php echo htmlspecialchars($user['id']); ?>)">Excluir</button>
+                        </td>
+                    </tr>
+                <?php endforeach; 
+            }?>
         </tbody>
     </table>
 </body>

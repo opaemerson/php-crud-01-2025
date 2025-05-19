@@ -28,19 +28,21 @@ $list = $service->listColors();
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($list as $color): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($color['id']); ?></td>
-                    <td><?php echo htmlspecialchars($color['nome']); ?></td>
-                    <td>
-                        <button onclick="openModal(
-                            <?php echo htmlspecialchars($color['id']); ?>, 
-                            '<?php echo htmlspecialchars($color['nome']); ?>')">
-                            Editar
-                        </button></td>
-                    <td>
-                </tr>
-            <?php endforeach; ?>
+            <?php if (!empty($list)){ ?>
+                <?php foreach ($list as $color): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($color['id']); ?></td>
+                        <td><?php echo htmlspecialchars($color['nome']); ?></td>
+                        <td>
+                            <button onclick="openModal(
+                                <?php echo htmlspecialchars($color['id']); ?>, 
+                                '<?php echo htmlspecialchars($color['nome']); ?>')">
+                                Editar
+                            </button></td>
+                        <td>
+                    </tr>
+                <?php endforeach; 
+            }?>
         </tbody>
     </table>
 </body>

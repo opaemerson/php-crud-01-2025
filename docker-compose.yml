@@ -33,6 +33,20 @@ services:
     networks:
       - php-crud-01-2025-network
 
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-app
+    ports:
+      - "82:82"
+    volumes:
+      - .:/app
+    depends_on:
+      - mysql
+    networks:
+      - php-crud-01-2025-network
+
 volumes:
   mysql_data:
 

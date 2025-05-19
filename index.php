@@ -32,23 +32,25 @@ $list = $service->listAll();
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($list as $register): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($register['usuario']); ?></td>
-                    <td><?php echo htmlspecialchars($register['cor']); ?></td>
-                    <td>
-                        <button onclick="openModal(
-                            <?php echo htmlspecialchars($register['id']); ?>, 
-                            '<?php echo htmlspecialchars($register['usuario_id']); ?>', 
-                            '<?php echo htmlspecialchars($register['cor_id']); ?>')">
-                            Editar
-                        </button>
-                    </td>
-                    <td>
-                        <button onclick="deleteRegister(<?php echo htmlspecialchars($register['id']); ?>)">Excluir</button>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
+            <?php if (!empty($list)){ ?>
+                <?php foreach ($list as $register): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($register['usuario']); ?></td>
+                        <td><?php echo htmlspecialchars($register['cor']); ?></td>
+                        <td>
+                            <button onclick="openModal(
+                                <?php echo htmlspecialchars($register['id']); ?>, 
+                                '<?php echo htmlspecialchars($register['usuario_id']); ?>', 
+                                '<?php echo htmlspecialchars($register['cor_id']); ?>')">
+                                Editar
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="deleteRegister(<?php echo htmlspecialchars($register['id']); ?>)">Excluir</button>
+                        </td>
+                    </tr>
+                <?php endforeach; 
+            }?>
         </tbody>
     </table>
 </body>

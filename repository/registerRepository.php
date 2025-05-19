@@ -12,7 +12,7 @@ class RegisterRepository
                     b.id as cor_id
                 FROM registros  a
                 INNER JOIN cores b ON b.id = a.cor_id 
-                INNER JOIN usuarios c ON c.id = a.usuario_id ";
+                INNER JOIN usuarios c ON c.id = a.usuario_id";
             
         $return = $conn->query($sql);
 

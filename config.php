@@ -2,7 +2,7 @@
 
 class Config
 {
-    private $host = "host.docker.internal";
+    private $host = "mysql";
     private $user = "user";
     private $password = "password";
     private $dbname = "php-crud";
