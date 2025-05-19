@@ -48,7 +48,7 @@ try {
             $return = (new UpdateService())->updateUser($params);
 
             if($return === false){
-                throw new Exception("Falha ao deletar no banco de dados.");
+                throw new Exception("Falha ao atualizar no banco de dados.");
             }
             
             break;
