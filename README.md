@@ -53,6 +53,6 @@ Após os containers estarem ativos e o banco importado, acesse o sistema CRUD pe
 http://localhost:82
 
 ### Observações
-Certifique-se de que as portas 82 (aplicação) e 8082 (phpMyAdmin) estejam disponíveis no seu sistema.
+Certifique-se de que as portas 82 (aplicação), 8082 (phpMyAdmin) e 3306 (MySql) estejam disponíveis no seu sistema.
 
 Caso deseje alterar as configurações, edite os arquivos docker-compose.yml e, se necessário, os arquivos de ambiente.
