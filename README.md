@@ -26,7 +26,7 @@ cd php-crud-01-2025
 
 No diretório do projeto, execute o comando abaixo para construir e iniciar os serviços:
 
-docker-compose up -d --build
+*docker-compose up -d --build*
 
 ### 5. Importando o Banco de Dados
 
